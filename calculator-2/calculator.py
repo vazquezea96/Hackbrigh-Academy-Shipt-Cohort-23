@@ -2,8 +2,8 @@
 
 from arithmetic import (add, subtract, multiply, divide, square, cube,
                         power, mod, )
-
-print("Please provide prefix notation equation, if only 1 operand provided we'll use 0 for operand 2.")
+print("Please provide prefix notation equation.")
+print("If only 1 operand provided we'll use 0 for operand 2.")
 print("Press q to quit.")
 
 
@@ -14,17 +14,16 @@ while True:
         break
     if len(tokens) < 2:
         print("Please provide operands.")
-        continue 
+        continue
+
     operator = tokens[0]
     num1 = tokens[1]
-    # print(num1)
     num2 = tokens[2] if len(tokens) > 2 else "0"
-    # print(num2)
 
     if not num1.isdigit() or not num2.isdigit():
         print("Please provide numbers.")
         continue
-    
+
     num1 = float(num1)
     num2 = float(num2)
 
@@ -39,7 +38,7 @@ while True:
     elif operator == "/":
         result = divide(num1, num2)
     elif operator == "square":
-        result = square(num1)    
+        result = square(num1)
     elif operator == "cube":
         result = cube(num1)
     elif operator == "pow":
@@ -49,5 +48,5 @@ while True:
     else:
         print("Please review available operations and try again")
         continue
-    
-    print(result)    
+
+    print(result)

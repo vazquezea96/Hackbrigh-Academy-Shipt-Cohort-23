@@ -1,11 +1,9 @@
 def produce_summary_report(day, the_file_day):
     print(day)
-    the_file = open(the_file_day)
+    the_file = open(the_file_day, "r", encoding="utf8")
     for line in the_file:
         line = line.rstrip()
         words = line.split('|')
-
-       
     melon = words[0]
     count = words[1]
     amount = words[2]

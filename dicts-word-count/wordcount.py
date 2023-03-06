@@ -13,7 +13,10 @@ def word_count(filename):
             for letter in line:
                 letter_counts[letter] = letter_counts.get(letter, 0) + 1
 
-    return letter_counts
+    # return letter_counts
+
+    for letter, count in letter_counts.items():
+        print(letter, count)
 
 
-print(word_count('test.txt'))
+print(word_count('twain.txt'))

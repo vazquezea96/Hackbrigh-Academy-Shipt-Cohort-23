@@ -73,9 +73,7 @@ def all_names_by_hobby(filename):
         for line in reader:
             line = line.split('|')
             hobby = line[3]
-            # print(hobby)
             name = line[0]
-            # print(name)
             if hobby == 'Fitness':
                 fitness.append(name)
             elif hobby == 'Nature':
@@ -89,19 +87,13 @@ def all_names_by_hobby(filename):
             elif hobby == "Play":
                 play.append(name)
 
-    # villagers.append(fitness)
-    # villagers.append(nature)
-    # villagers.append(education)
-    # villagers.append(music)
-    # villagers.append(fashion)
-    # villagers.append(play)
-
-    villagers.extend([fitness, nature, education, music, fashion, play])
+    villagers.extend([sorted(fitness), sorted(nature), sorted(
+        education), sorted(music), sorted(fashion), sorted(play)])
 
     return villagers
 
 
-print(all_names_by_hobby("villagers.csv"))
+# print(all_names_by_hobby("villagers.csv"))
 
 
 def all_data(filename):
